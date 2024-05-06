@@ -1,0 +1,2 @@
+: foreach vars/*.nt |> ^t^ nt2json %f >%o |> vars/%B.json
+: foreach vars/*.nt | vars/%B.json |> PYTHONPATH=./templates wheezy.template templates/kde.colors.wz vars/%B.json >%o |> schemes/kde/%B.colors ^__pycache__
