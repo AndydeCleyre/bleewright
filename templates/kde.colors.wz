@@ -32,12 +32,11 @@ BackgroundNormal=@{bg[thing]}
 DecorationFocus=@{bg['focus']}
 DecorationHover=@{fg['hover']}
 ForegroundActive=@{fg[thing]}
-@# fg urgent/alert/recommend for active?
+@# fg alert for active?
 ForegroundInactive=@{fg['inactive']}
 ForegroundLink=@{fg['button']}
 ForegroundNegative=@{fg['alert']}
-ForegroundNeutral=246,116,0
-@# neutral? where is it used?
+ForegroundNeutral=@{fg['alt']}
 ForegroundNormal=@{fg[thing]}
 ForegroundPositive=@{fg['alt']}
 ForegroundVisited=@{fg['alt']}
