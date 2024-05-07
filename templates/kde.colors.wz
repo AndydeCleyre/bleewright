@@ -31,7 +31,7 @@ BackgroundAlternate=@{bg['window']}
 BackgroundNormal=@{bg[thing]}
 DecorationFocus=@{bg['focus']}
 DecorationHover=@{fg['hover']}
-ForegroundActive=@{fg[thing]}
+ForegroundActive=@{fg['alert']}
 @# fg alert for active?
 ForegroundInactive=@{fg['inactive']}
 ForegroundLink=@{fg['button']}
