@@ -1,0 +1,20 @@
+meta:
+  name: HotBrown
+colors:
+  bg:
+    window: #201818
+    button: #222222
+    input: #222222
+    selection: #a94d37
+    alt: #1f2433
+    focus: #4a1b1b
+  fg:
+    window: #c2b790
+    button: #c2b790
+    title: #dea050
+    input: #c2b790
+    selection: #a7dbd9
+    alt: #6d948d
+    inactive: #bab972
+    alert: #a94d37
+    hover: #4a1b1b

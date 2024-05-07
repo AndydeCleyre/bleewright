@@ -1,0 +1,20 @@
+meta:
+  name: MacaroniTime
+colors:
+  bg:
+    window: #262c2e
+    button: #222222
+    input: #222222
+    selection: #783627
+    alt: #222222
+    focus: #a94d37
+  fg:
+    window: #c2b790
+    button: #c2b790
+    title: #dea050
+    input: #c2b790
+    selection: #c2b790
+    alt: #709d3d
+    inactive: #6d948d
+    alert: #d3869b
+    hover: #a94d37

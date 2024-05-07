@@ -1,0 +1,20 @@
+meta:
+  name: UglyMacaroni
+colors:
+  bg:
+    window: #262c2e
+    button: #222222
+    input: #222222
+    selection: #643131
+    alt: #222222
+    focus: #a94d37
+  fg:
+    window: #b8bb26
+    button: #dea050
+    title: #dea050
+    input: #c2b790
+    selection: #a7dbd9
+    alt: #709d3d
+    inactive: #6d948d
+    alert: #da4453
+    hover: #ff8bf0
