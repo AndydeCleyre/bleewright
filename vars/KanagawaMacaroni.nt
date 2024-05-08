@@ -1,11 +1,11 @@
 meta:
-  name: Lavenoni
+  name: KanagawaMacaroni
 colors:
   bg:
     window: #1f1f28
     button: #16161d
     input: #16161d
-    selection: #8080c6
+    selection: #3b3a84
     alt: #222222
     focus: #a94d37
   fg:
@@ -13,7 +13,7 @@ colors:
     button: #dea050
     title: #dea050
     input: #dcd7ba
-    selection: #18180c
+    selection: #dcd7ba
     alt: #709d3d
     inactive: #6d948d
     alert: #f3afaf

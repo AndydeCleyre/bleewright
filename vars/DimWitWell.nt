@@ -1,0 +1,20 @@
+meta:
+  name: DimWitWell
+colors:
+  bg:
+    window: #242a2c
+    button: #222222
+    input: #222222
+    selection: #87005f
+    alt: #222222
+    focus: #87005f
+  fg:
+    window: #b8bb26
+    button: #e2a964
+    title: #e2a964
+    input: #c2b790
+    selection: #afff87
+    alt: #95c262
+    inactive: #a0bab5
+    alert: #da4453
+    hover: #dfa89b
