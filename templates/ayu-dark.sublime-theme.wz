@@ -914,7 +914,7 @@
       25
     ],
     "layer2.opacity": 1,
-    "layer2.tint": "#141821",
+    "layer2.tint": "@{colors['bg']['alt']}",
     "content_margin": [
       10,
       35,
@@ -928,7 +928,7 @@
       13,
       7
     ],
-    "layer0.tint": "#141821",
+    "layer0.tint": "@{colors['bg']['alt']}",
     "layer0.opacity": 1
   },
   {
@@ -942,7 +942,7 @@
       13,
       7
     ],
-    "layer0.tint": "#141821",
+    "layer0.tint": "@{colors['bg']['alt']}",
     "layer0.opacity": 1
   },
   {
@@ -1137,7 +1137,7 @@
       4
     ],
     "layer0.opacity": 1,
-    "layer0.tint": "#141821",
+    "layer0.tint": "@{colors['bg']['alt']}",
     "content_margin": [
       0,
       4
@@ -1191,7 +1191,7 @@
   {
     "class": "kind_container",
     "layer0.texture": "ayu/assets/kind-bg.png",
-    "layer0.tint": "#141821",
+    "layer0.tint": "@{colors['bg']['alt']}",
     "layer0.inner_margin": [
       4,
       4,
@@ -1200,7 +1200,7 @@
     ],
     "layer0.opacity": 0,
     "layer1.texture": "ayu/assets/kind-bg.png",
-    "layer1.tint": "#14182100",
+    "layer1.tint": "@{colors['bg']['alt']}00",
     "layer1.inner_margin": [
       4,
       4,
@@ -1209,7 +1209,7 @@
     ],
     "layer1.opacity": 0.3,
     "layer2.texture": "ayu/assets/kind-border.png",
-    "layer2.tint": "#14182100",
+    "layer2.tint": "@{colors['bg']['alt']}00",
     "layer2.inner_margin": [
       4,
       4,
@@ -1531,9 +1531,9 @@
   {
     "class": "auto_complete_detail_pane",
     "layer0.opacity": 1,
-    "layer0.tint": "#141821",
+    "layer0.tint": "@{colors['bg']['alt']}",
     "layer1.opacity": 1,
-    "layer1.tint": "#141821",
+    "layer1.tint": "@{colors['bg']['alt']}",
     "content_margin": [
       8,
       10,
@@ -1549,8 +1549,8 @@
   },
   {
     "class": "auto_complete_details",
-    "background_color": "#141821",
-    "monospace_background_color": "#141821"
+    "background_color": "@{colors['bg']['alt']}",
+    "monospace_background_color": "@{colors['bg']['alt']}"
   },
   {
     "class": "panel_control",
@@ -1710,7 +1710,7 @@
         "class": "overlay_control"
       }
     ],
-    "layer0.tint": "#141821"
+    "layer0.tint": "@{colors['bg']['alt']}"
   },
   {
     "class": "scroll_bar_control",
@@ -1876,7 +1876,7 @@
       10,
       8
     ],
-    "layer0.tint": "#141821",
+    "layer0.tint": "@{colors['bg']['alt']}",
     "layer1.texture": "ayu/assets/input-border.png",
     "layer1.opacity": 1,
     "layer1.inner_margin": [
