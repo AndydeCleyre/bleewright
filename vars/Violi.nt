@@ -1,0 +1,20 @@
+meta:
+  name: Violi
+colors:
+  bg:
+    window: #1f1f28
+    button: #16161d
+    input: #16161d
+    selection: #6161e5
+    alt: #222222
+    focus: #a94d37
+  fg:
+    window: #98bb6c
+    button: #dea050
+    title: #dea050
+    input: #dcd7ba
+    selection: #ffffb5
+    alt: #709d3d
+    inactive: #6d948d
+    alert: #f3afaf
+    hover: #ff8bf0
