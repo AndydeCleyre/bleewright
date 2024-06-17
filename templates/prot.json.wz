@@ -1,0 +1,6 @@
+@require(meta, colors)
+@(
+from utils import prot, variant_json
+content = variant_json(meta, colors, prot)
+)\
+@content

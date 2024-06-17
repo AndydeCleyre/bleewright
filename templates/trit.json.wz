@@ -1,0 +1,6 @@
+@require(meta, colors)
+@(
+from utils import trit, variant_json
+content = variant_json(meta, colors, trit)
+)\
+@content
