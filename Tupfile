@@ -1,5 +1,1 @@
-: foreach vars/*.nt |> ^t^ nt2json %f >%o |> vars/%B.json
-: foreach vars/*.nt | vars/%B.json |> PYTHONPATH=./templates wheezy.template templates/kde.colors.wz vars/%B.json >%o |> schemes/kde/%B.colors ^__pycache__
-: foreach vars/*.nt | vars/%B.json |> PYTHONPATH=./templates wheezy.template templates/colors.tdesktop-theme.wz vars/%B.json >%o |> schemes/telegram/%B.tdesktop-theme ^__pycache__
-: foreach vars/*.nt | vars/%B.json |> PYTHONPATH=./templates wheezy.template templates/ayu-dark.sublime-theme.wz vars/%B.json >%o |> schemes/sublime/ayu-dark-%B.sublime-theme ^__pycache__
-: foreach vars/*.nt | vars/%B.json |> PYTHONPATH=./templates wheezy.template templates/ayu-dark.sublime-color-scheme.wz vars/%B.json >%o |> schemes/sublime/ayu-dark-%B.sublime-color-scheme ^__pycache__
+run wheezy.template templates/tup.rules.wz

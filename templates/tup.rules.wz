@@ -1,0 +1,16 @@
+: foreach vars/*.nt |> ^t^ nt2json %f >%o |> tmp/vars/%B.json
+: foreach vars/*.nt | tmp/vars/%B.json |> PYTHONPATH=./templates wheezy.template templates/kde.colors.wz tmp/vars/%B.json >%o |> schemes/kde/%B.colors                            ^__pycache__
+: foreach vars/*.nt | tmp/vars/%B.json |> wheezy.template templates/colors.tdesktop-theme.wz tmp/vars/%B.json >%o             |> schemes/telegram/%B.tdesktop-theme               ^__pycache__
+: foreach vars/*.nt | tmp/vars/%B.json |> wheezy.template templates/ayu-dark.sublime-theme.wz tmp/vars/%B.json >%o            |> schemes/sublime/ayu-dark-%B.sublime-theme        ^__pycache__
+: foreach vars/*.nt | tmp/vars/%B.json |> wheezy.template templates/ayu-dark.sublime-color-scheme.wz tmp/vars/%B.json >%o     |> schemes/sublime/ayu-dark-%B.sublime-color-scheme ^__pycache__
+: foreach vars/*.nt | tmp/vars/%B.json |> ^t^ wheezy.template templates/firefox.manifest.json.wz tmp/vars/%B.json >%o |> tmp/firefox/%B/manifest.json ^__pycache__
+: foreach vars/*.nt | tmp/firefox/%B/manifest.json |> zip -j %o tmp/firefox/%B/manifest.json |> schemes/firefox/%B.xpi
+@for variant in ('trit', 'prot', 'deuter', 'rot180'):
+: foreach vars/*.nt | tmp/vars/%B.json |> ^t^ PYTHONPATH=./templates wheezy.template templates/@{variant}.json.wz tmp/vars/%B.json >%o |> tmp/vars/%B@{variant.title()}.json ^__pycache__
+: foreach vars/*.nt | tmp/vars/%B@{variant.title()}.json |> PYTHONPATH=./templates wheezy.template templates/kde.colors.wz tmp/vars/%B@{variant.title()}.json >%o |> schemes/kde/%B@{variant.title()}.colors                            ^__pycache__
+: foreach vars/*.nt | tmp/vars/%B@{variant.title()}.json |> wheezy.template templates/colors.tdesktop-theme.wz tmp/vars/%B@{variant.title()}.json >%o             |> schemes/telegram/%B@{variant.title()}.tdesktop-theme               ^__pycache__
+: foreach vars/*.nt | tmp/vars/%B@{variant.title()}.json |> wheezy.template templates/ayu-dark.sublime-theme.wz tmp/vars/%B@{variant.title()}.json >%o            |> schemes/sublime/ayu-dark-%B@{variant.title()}.sublime-theme        ^__pycache__
+: foreach vars/*.nt | tmp/vars/%B@{variant.title()}.json |> wheezy.template templates/ayu-dark.sublime-color-scheme.wz tmp/vars/%B@{variant.title()}.json >%o     |> schemes/sublime/ayu-dark-%B@{variant.title()}.sublime-color-scheme ^__pycache__
+: foreach vars/*.nt | tmp/vars/%B@{variant.title()}.json |> ^t^ wheezy.template templates/firefox.manifest.json.wz tmp/vars/%B@{variant.title()}.json >%o |> tmp/firefox/%B@{variant.title()}/manifest.json ^__pycache__
+: foreach vars/*.nt | tmp/firefox/%B@{variant.title()}/manifest.json |> zip -j %o tmp/firefox/%B@{variant.title()}/manifest.json |> schemes/firefox/%B@{variant.title()}.xpi
+@end

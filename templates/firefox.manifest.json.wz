@@ -1,0 +1,30 @@
+@require(meta, colors)
+{
+  "manifest_version": 2,
+  "version": "0.0.1",
+  "name": "@{meta['name']}",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "@{meta.get('author id', 'colorpress@andydecleyre.github.io')}"
+    }
+  },
+  "theme": {
+    "colors": {
+      "frame": "@{colors['bg']['window']}",
+      "icons_attention": "@{colors['fg']['alert']}",
+      "popup": "@{colors['bg']['alt']}",
+      "popup_text": "@{colors['fg']['alt']}",
+      "tab_background_text": "@{colors['fg']['inactive']}",
+      "tab_line": "@{colors['fg']['hover']}",
+      "toolbar": "@{colors['bg']['window']}",
+      "toolbar_field": "@{colors['bg']['input']}",
+      "toolbar_field_border_focus": "@{colors['bg']['focus']}",
+      "toolbar_field_highlight": "@{colors['bg']['selection']}",
+      "toolbar_field_highlight_text": "@{colors['fg']['selection']}",
+      "toolbar_field_text": "@{colors['fg']['input']}",
+      "toolbar_field_text": "@{colors['fg']['input']}",
+      "toolbar_text": "@{colors['fg']['window']}",
+      "toolbar_top_separator": "@{colors['bg']['window']}"
+    }
+  }
+}
