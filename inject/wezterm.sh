@@ -5,8 +5,6 @@ cursor=$(kreadconfig5 --group Colors:View --key DecorationHover | pastel format)
 fakewhite=$(kreadconfig5 --group WM --key activeForeground | pastel format)
 fakewhitesat=$(pastel saturate .5 "$fakewhite" | pastel format)
 
-# TODO: post (hooks?): tup in wezfolder. (or make.sh?)
-
 tmpfile=$(mktemp)
 targetfile=~/.config/wezterm/vars.nt
 cp "$targetfile" "$tmpfile"
@@ -32,4 +30,11 @@ mv -i "$tmpfile" "$targetfile"
 
 if [ -e "$tmpfile" ]; then
   rm "$tmpfile"
+fi
+
+cd ~/.config/wezterm
+if command -v tup >/dev/null 2>&1; then
+  tup
+else
+  ./make.sh
 fi
