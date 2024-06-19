@@ -14,12 +14,12 @@ def trit(color: str) -> str:
     return (pastel['colorblind', 'trit', color] | pastel['format'])().strip()
 
 
-# def rot180(color: str) -> str:
+def rot30(color: str) -> str:
     # HMMM:
     # - pastel complement
     # - pastel rotate ANGLE
     # - pastel . . . negate?
-    # return (pastel['rotate', '180', color] | pastel['format'])().strip()
+    return (pastel['rotate', '30', color] | pastel['format'])().strip()
 
 
 # def variant_json(meta: dict, colors: dict, alter, suffix: str) -> str:
