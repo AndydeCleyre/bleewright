@@ -27,6 +27,7 @@ dialogsUnreadBg: @{colors['fg']['alert']};
 dialogsUnreadBgMuted: @{colors['fg']['inactive']};
 dialogsUnreadFg: @{colors['bg']['window']};
 filterInputBorderFg: @{colors['bg']['focus']};
+historyFileThumbIconFg: @{colors['fg']['hover']};
 historyLinkInFg: @{colors['fg']['button']};
 historyPeer1UserpicBg: #946e6e;
 historyPeer2UserpicBg: #6e946e;
