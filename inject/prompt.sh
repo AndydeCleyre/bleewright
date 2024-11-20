@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
-bg=$(kreadconfig5 --group Colors:Tooltip --key BackgroundNormal | pastel format)
+bg=$(kreadconfig5 --group Colors:Window --key BackgroundNormal | pastel format)
 
 tmpfile=$(mktemp)
 targetfile=~/.config/zsh/prompt.zsh
