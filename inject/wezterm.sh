@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
-bg=$(kreadconfig5 --group Colors:Window --key BackgroundNormal | pastel format)
+bg=$(kreadconfig5 --group Colors:View --key BackgroundNormal | pastel format)
 cursor=$(kreadconfig5 --group Colors:View --key DecorationHover | pastel format)
 fakewhite=$(kreadconfig5 --group WM --key activeForeground | pastel format)
 fakewhitesat=$(pastel saturate .5 "$fakewhite" | pastel format)
