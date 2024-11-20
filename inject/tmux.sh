@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
-bg_tab=$(kreadconfig5 --group Colors:Tooltip --key BackgroundNormal | pastel format)
+bg_tab=$(kreadconfig5 --group Colors:Window --key BackgroundNormal | pastel format)
 bg_selection=$(kreadconfig5 --group Colors:Selection --key BackgroundNormal | pastel format)
 fg_selection=$(kreadconfig5 --group Colors:Selection --key ForegroundNormal | pastel format)
 
