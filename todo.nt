@@ -5,9 +5,10 @@
 - readme/docs
 - telegram android scheme?
 - test contrast?
-- ~/.config/breezerc:
+- ~/.config/breezerc inject:
   > [Common]
   > ShadowColor=226,169,100
 - mouse mark
-- okular accessibility fg/bg
-- plasma hud rc?
+- okular accessibility fg/bg inject
+- plasma hud rc inject?
+- micro bg inject
