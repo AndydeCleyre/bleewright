@@ -1,0 +1,19 @@
+[tools]
+python = "latest"
+"ubi:sharkdp/pastel" = "latest"
+
+[env._.python]
+venv = { path = ".venv", create = true }
+
+[tasks.ensure-uv]
+run = "command -v uv || python -m pip install uv"
+hide = true
+
+[tasks.bump-reqs]
+depends = ["ensure-uv"]
+run = "uv pip compile --python python -o requirements.txt --no-header --annotation-style=line -U requirements.in"
+alias = "reqs"
+
+[tasks.install]
+depends = ["ensure-uv"]
+run = "uv pip install -p python -r requirements.txt"
