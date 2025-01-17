@@ -39,7 +39,7 @@ if ! diff -q "$targetfile" "$tmpfile"; then
   fi
 
   mv -i "$tmpfile" "$targetfile"
-}
+fi
 
 if [ -e "$tmpfile" ]; then
   rm "$tmpfile"
