@@ -4,7 +4,7 @@
 : foreach vars/*.nt | tmp/vars/%B.json |> wheezy.template templates/ayu-dark.sublime-theme.wz tmp/vars/%B.json >%o            |> schemes/sublime/ayu-dark-%B.sublime-theme        ^__pycache__
 : foreach vars/*.nt | tmp/vars/%B.json |> wheezy.template templates/ayu-dark.sublime-color-scheme.wz tmp/vars/%B.json >%o     |> schemes/sublime/ayu-dark-%B.sublime-color-scheme ^__pycache__
 : foreach vars/*.nt | tmp/vars/%B.json |> ^t^ wheezy.template templates/firefox.manifest.json.wz tmp/vars/%B.json >%o |> tmp/firefox/%B/manifest.json ^__pycache__
-: foreach vars/*.nt | tmp/firefox/%B/manifest.json |> zip -j %o tmp/firefox/%B/manifest.json |> schemes/firefox/%B.xpi
+: foreach vars/*.nt | tmp/firefox/%B/manifest.json |> ouch c -f zip tmp/firefox/%B/manifest.json %o |> schemes/firefox/%B.xpi
 @for variant in ('trit', 'prot', 'deuter', 'rot30'):
 : foreach vars/*.nt | tmp/vars/%B.json |> ^t^ PYTHONPATH=./templates wheezy.template templates/@{variant}.json.wz tmp/vars/%B.json >%o |> tmp/vars/%B@{variant.title()}.json ^__pycache__
 : foreach vars/*.nt | tmp/vars/%B@{variant.title()}.json |> PYTHONPATH=./templates wheezy.template templates/kde.colors.wz tmp/vars/%B@{variant.title()}.json >%o |> schemes/kde/%B@{variant.title()}.colors                            ^__pycache__
@@ -12,5 +12,5 @@
 : foreach vars/*.nt | tmp/vars/%B@{variant.title()}.json |> wheezy.template templates/ayu-dark.sublime-theme.wz tmp/vars/%B@{variant.title()}.json >%o            |> schemes/sublime/ayu-dark-%B@{variant.title()}.sublime-theme        ^__pycache__
 : foreach vars/*.nt | tmp/vars/%B@{variant.title()}.json |> wheezy.template templates/ayu-dark.sublime-color-scheme.wz tmp/vars/%B@{variant.title()}.json >%o     |> schemes/sublime/ayu-dark-%B@{variant.title()}.sublime-color-scheme ^__pycache__
 : foreach vars/*.nt | tmp/vars/%B@{variant.title()}.json |> ^t^ wheezy.template templates/firefox.manifest.json.wz tmp/vars/%B@{variant.title()}.json >%o |> tmp/firefox/%B@{variant.title()}/manifest.json ^__pycache__
-: foreach vars/*.nt | tmp/firefox/%B@{variant.title()}/manifest.json |> zip -j %o tmp/firefox/%B@{variant.title()}/manifest.json |> schemes/firefox/%B@{variant.title()}.xpi
+: foreach vars/*.nt | tmp/firefox/%B@{variant.title()}/manifest.json |> ouch c -f zip tmp/firefox/%B@{variant.title()}/manifest.json %o |> schemes/firefox/%B@{variant.title()}.xpi
 @end

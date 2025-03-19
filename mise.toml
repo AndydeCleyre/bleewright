@@ -1,5 +1,6 @@
 [tools]
 python = "latest"
+"ubi:ouch-org/ouch" = "latest"
 "ubi:sharkdp/pastel" = "latest"
 
 [env._.python]
