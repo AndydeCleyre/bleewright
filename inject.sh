@@ -1,5 +1,5 @@
 #!/bin/sh -e
-PATH_HERE=$(pwd)/$(dirname "$0")
+PATH_HERE=$(dirname "$0")
 for injector in "$PATH_HERE"/inject/*; do
   $injector
 done

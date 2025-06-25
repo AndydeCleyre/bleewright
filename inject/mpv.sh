@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
 # shellcheck source=../utils.sh
-. "$PWD/$(dirname "$0")"/../utils.sh
+. "$(dirname "$0")"/../utils.sh
 
 inject_mpv_conf () {
   fg_window=$(kreadconfig5 --group Colors:Window --key ForegroundNormal | pastel format)

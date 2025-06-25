@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
 # shellcheck source=../utils.sh
-. "$PWD/$(dirname "$0")"/../utils.sh
+. "$(dirname "$0")"/../utils.sh
 
 inject () {
   bg=$(kreadconfig5 --group Colors:Window --key BackgroundNormal | pastel format)
