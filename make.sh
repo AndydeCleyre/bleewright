@@ -3,9 +3,57 @@
 export tup_vardict="$(cd $(dirname $0) && pwd)/tup-generate.vardict"
 mkdir -p "schemes"
 mkdir -p "schemes/firefox"
+mkdir -p "tmp"
+mkdir -p "tmp/firefox"
+mkdir -p "tmp/firefox/VioliRot30"
+mkdir -p "tmp/firefox/UglyMacaroniRot30"
+mkdir -p "tmp/firefox/PurpleMacaroniRot30"
+mkdir -p "tmp/firefox/OneDarkMacaroniRot30"
+mkdir -p "tmp/firefox/MacaroniTimeRot30"
+mkdir -p "tmp/firefox/LavenoniRot30"
+mkdir -p "tmp/firefox/KanagawaMacaroniRot30"
+mkdir -p "tmp/firefox/HotBrownRot30"
+mkdir -p "tmp/firefox/DimWitWellRot30"
 mkdir -p "schemes/sublime"
 mkdir -p "schemes/telegram"
 mkdir -p "schemes/kde"
+mkdir -p "tmp/vars"
+mkdir -p "tmp/firefox/VioliDeuter"
+mkdir -p "tmp/firefox/UglyMacaroniDeuter"
+mkdir -p "tmp/firefox/PurpleMacaroniDeuter"
+mkdir -p "tmp/firefox/OneDarkMacaroniDeuter"
+mkdir -p "tmp/firefox/MacaroniTimeDeuter"
+mkdir -p "tmp/firefox/LavenoniDeuter"
+mkdir -p "tmp/firefox/KanagawaMacaroniDeuter"
+mkdir -p "tmp/firefox/HotBrownDeuter"
+mkdir -p "tmp/firefox/DimWitWellDeuter"
+mkdir -p "tmp/firefox/VioliProt"
+mkdir -p "tmp/firefox/UglyMacaroniProt"
+mkdir -p "tmp/firefox/PurpleMacaroniProt"
+mkdir -p "tmp/firefox/OneDarkMacaroniProt"
+mkdir -p "tmp/firefox/MacaroniTimeProt"
+mkdir -p "tmp/firefox/LavenoniProt"
+mkdir -p "tmp/firefox/KanagawaMacaroniProt"
+mkdir -p "tmp/firefox/HotBrownProt"
+mkdir -p "tmp/firefox/DimWitWellProt"
+mkdir -p "tmp/firefox/VioliTrit"
+mkdir -p "tmp/firefox/UglyMacaroniTrit"
+mkdir -p "tmp/firefox/PurpleMacaroniTrit"
+mkdir -p "tmp/firefox/OneDarkMacaroniTrit"
+mkdir -p "tmp/firefox/MacaroniTimeTrit"
+mkdir -p "tmp/firefox/LavenoniTrit"
+mkdir -p "tmp/firefox/KanagawaMacaroniTrit"
+mkdir -p "tmp/firefox/HotBrownTrit"
+mkdir -p "tmp/firefox/DimWitWellTrit"
+mkdir -p "tmp/firefox/Violi"
+mkdir -p "tmp/firefox/UglyMacaroni"
+mkdir -p "tmp/firefox/PurpleMacaroni"
+mkdir -p "tmp/firefox/OneDarkMacaroni"
+mkdir -p "tmp/firefox/MacaroniTime"
+mkdir -p "tmp/firefox/Lavenoni"
+mkdir -p "tmp/firefox/KanagawaMacaroni"
+mkdir -p "tmp/firefox/HotBrown"
+mkdir -p "tmp/firefox/DimWitWell"
 (nt2json vars/DimWitWell.nt >tmp/vars/DimWitWell.json)
 (nt2json vars/HotBrown.nt >tmp/vars/HotBrown.json)
 (nt2json vars/KanagawaMacaroni.nt >tmp/vars/KanagawaMacaroni.json)
@@ -60,15 +108,15 @@ mkdir -p "schemes/kde"
 (wheezy.template templates/firefox.manifest.json.wz tmp/vars/PurpleMacaroni.json >tmp/firefox/PurpleMacaroni/manifest.json)
 (wheezy.template templates/firefox.manifest.json.wz tmp/vars/UglyMacaroni.json >tmp/firefox/UglyMacaroni/manifest.json)
 (wheezy.template templates/firefox.manifest.json.wz tmp/vars/Violi.json >tmp/firefox/Violi/manifest.json)
-(zip -j schemes/firefox/DimWitWell.xpi tmp/firefox/DimWitWell/manifest.json)
-(zip -j schemes/firefox/HotBrown.xpi tmp/firefox/HotBrown/manifest.json)
-(zip -j schemes/firefox/KanagawaMacaroni.xpi tmp/firefox/KanagawaMacaroni/manifest.json)
-(zip -j schemes/firefox/Lavenoni.xpi tmp/firefox/Lavenoni/manifest.json)
-(zip -j schemes/firefox/MacaroniTime.xpi tmp/firefox/MacaroniTime/manifest.json)
-(zip -j schemes/firefox/OneDarkMacaroni.xpi tmp/firefox/OneDarkMacaroni/manifest.json)
-(zip -j schemes/firefox/PurpleMacaroni.xpi tmp/firefox/PurpleMacaroni/manifest.json)
-(zip -j schemes/firefox/UglyMacaroni.xpi tmp/firefox/UglyMacaroni/manifest.json)
-(zip -j schemes/firefox/Violi.xpi tmp/firefox/Violi/manifest.json)
+(ouch c -f zip tmp/firefox/DimWitWell/manifest.json schemes/firefox/DimWitWell.xpi)
+(ouch c -f zip tmp/firefox/HotBrown/manifest.json schemes/firefox/HotBrown.xpi)
+(ouch c -f zip tmp/firefox/KanagawaMacaroni/manifest.json schemes/firefox/KanagawaMacaroni.xpi)
+(ouch c -f zip tmp/firefox/Lavenoni/manifest.json schemes/firefox/Lavenoni.xpi)
+(ouch c -f zip tmp/firefox/MacaroniTime/manifest.json schemes/firefox/MacaroniTime.xpi)
+(ouch c -f zip tmp/firefox/OneDarkMacaroni/manifest.json schemes/firefox/OneDarkMacaroni.xpi)
+(ouch c -f zip tmp/firefox/PurpleMacaroni/manifest.json schemes/firefox/PurpleMacaroni.xpi)
+(ouch c -f zip tmp/firefox/UglyMacaroni/manifest.json schemes/firefox/UglyMacaroni.xpi)
+(ouch c -f zip tmp/firefox/Violi/manifest.json schemes/firefox/Violi.xpi)
 (PYTHONPATH=./templates wheezy.template templates/trit.json.wz tmp/vars/DimWitWell.json >tmp/vars/DimWitWellTrit.json)
 (PYTHONPATH=./templates wheezy.template templates/trit.json.wz tmp/vars/HotBrown.json >tmp/vars/HotBrownTrit.json)
 (PYTHONPATH=./templates wheezy.template templates/trit.json.wz tmp/vars/KanagawaMacaroni.json >tmp/vars/KanagawaMacaroniTrit.json)
@@ -123,15 +171,15 @@ mkdir -p "schemes/kde"
 (wheezy.template templates/firefox.manifest.json.wz tmp/vars/PurpleMacaroniTrit.json >tmp/firefox/PurpleMacaroniTrit/manifest.json)
 (wheezy.template templates/firefox.manifest.json.wz tmp/vars/UglyMacaroniTrit.json >tmp/firefox/UglyMacaroniTrit/manifest.json)
 (wheezy.template templates/firefox.manifest.json.wz tmp/vars/VioliTrit.json >tmp/firefox/VioliTrit/manifest.json)
-(zip -j schemes/firefox/DimWitWellTrit.xpi tmp/firefox/DimWitWellTrit/manifest.json)
-(zip -j schemes/firefox/HotBrownTrit.xpi tmp/firefox/HotBrownTrit/manifest.json)
-(zip -j schemes/firefox/KanagawaMacaroniTrit.xpi tmp/firefox/KanagawaMacaroniTrit/manifest.json)
-(zip -j schemes/firefox/LavenoniTrit.xpi tmp/firefox/LavenoniTrit/manifest.json)
-(zip -j schemes/firefox/MacaroniTimeTrit.xpi tmp/firefox/MacaroniTimeTrit/manifest.json)
-(zip -j schemes/firefox/OneDarkMacaroniTrit.xpi tmp/firefox/OneDarkMacaroniTrit/manifest.json)
-(zip -j schemes/firefox/PurpleMacaroniTrit.xpi tmp/firefox/PurpleMacaroniTrit/manifest.json)
-(zip -j schemes/firefox/UglyMacaroniTrit.xpi tmp/firefox/UglyMacaroniTrit/manifest.json)
-(zip -j schemes/firefox/VioliTrit.xpi tmp/firefox/VioliTrit/manifest.json)
+(ouch c -f zip tmp/firefox/DimWitWellTrit/manifest.json schemes/firefox/DimWitWellTrit.xpi)
+(ouch c -f zip tmp/firefox/HotBrownTrit/manifest.json schemes/firefox/HotBrownTrit.xpi)
+(ouch c -f zip tmp/firefox/KanagawaMacaroniTrit/manifest.json schemes/firefox/KanagawaMacaroniTrit.xpi)
+(ouch c -f zip tmp/firefox/LavenoniTrit/manifest.json schemes/firefox/LavenoniTrit.xpi)
+(ouch c -f zip tmp/firefox/MacaroniTimeTrit/manifest.json schemes/firefox/MacaroniTimeTrit.xpi)
+(ouch c -f zip tmp/firefox/OneDarkMacaroniTrit/manifest.json schemes/firefox/OneDarkMacaroniTrit.xpi)
+(ouch c -f zip tmp/firefox/PurpleMacaroniTrit/manifest.json schemes/firefox/PurpleMacaroniTrit.xpi)
+(ouch c -f zip tmp/firefox/UglyMacaroniTrit/manifest.json schemes/firefox/UglyMacaroniTrit.xpi)
+(ouch c -f zip tmp/firefox/VioliTrit/manifest.json schemes/firefox/VioliTrit.xpi)
 (PYTHONPATH=./templates wheezy.template templates/prot.json.wz tmp/vars/DimWitWell.json >tmp/vars/DimWitWellProt.json)
 (PYTHONPATH=./templates wheezy.template templates/prot.json.wz tmp/vars/HotBrown.json >tmp/vars/HotBrownProt.json)
 (PYTHONPATH=./templates wheezy.template templates/prot.json.wz tmp/vars/KanagawaMacaroni.json >tmp/vars/KanagawaMacaroniProt.json)
@@ -186,15 +234,15 @@ mkdir -p "schemes/kde"
 (wheezy.template templates/firefox.manifest.json.wz tmp/vars/PurpleMacaroniProt.json >tmp/firefox/PurpleMacaroniProt/manifest.json)
 (wheezy.template templates/firefox.manifest.json.wz tmp/vars/UglyMacaroniProt.json >tmp/firefox/UglyMacaroniProt/manifest.json)
 (wheezy.template templates/firefox.manifest.json.wz tmp/vars/VioliProt.json >tmp/firefox/VioliProt/manifest.json)
-(zip -j schemes/firefox/DimWitWellProt.xpi tmp/firefox/DimWitWellProt/manifest.json)
-(zip -j schemes/firefox/HotBrownProt.xpi tmp/firefox/HotBrownProt/manifest.json)
-(zip -j schemes/firefox/KanagawaMacaroniProt.xpi tmp/firefox/KanagawaMacaroniProt/manifest.json)
-(zip -j schemes/firefox/LavenoniProt.xpi tmp/firefox/LavenoniProt/manifest.json)
-(zip -j schemes/firefox/MacaroniTimeProt.xpi tmp/firefox/MacaroniTimeProt/manifest.json)
-(zip -j schemes/firefox/OneDarkMacaroniProt.xpi tmp/firefox/OneDarkMacaroniProt/manifest.json)
-(zip -j schemes/firefox/PurpleMacaroniProt.xpi tmp/firefox/PurpleMacaroniProt/manifest.json)
-(zip -j schemes/firefox/UglyMacaroniProt.xpi tmp/firefox/UglyMacaroniProt/manifest.json)
-(zip -j schemes/firefox/VioliProt.xpi tmp/firefox/VioliProt/manifest.json)
+(ouch c -f zip tmp/firefox/DimWitWellProt/manifest.json schemes/firefox/DimWitWellProt.xpi)
+(ouch c -f zip tmp/firefox/HotBrownProt/manifest.json schemes/firefox/HotBrownProt.xpi)
+(ouch c -f zip tmp/firefox/KanagawaMacaroniProt/manifest.json schemes/firefox/KanagawaMacaroniProt.xpi)
+(ouch c -f zip tmp/firefox/LavenoniProt/manifest.json schemes/firefox/LavenoniProt.xpi)
+(ouch c -f zip tmp/firefox/MacaroniTimeProt/manifest.json schemes/firefox/MacaroniTimeProt.xpi)
+(ouch c -f zip tmp/firefox/OneDarkMacaroniProt/manifest.json schemes/firefox/OneDarkMacaroniProt.xpi)
+(ouch c -f zip tmp/firefox/PurpleMacaroniProt/manifest.json schemes/firefox/PurpleMacaroniProt.xpi)
+(ouch c -f zip tmp/firefox/UglyMacaroniProt/manifest.json schemes/firefox/UglyMacaroniProt.xpi)
+(ouch c -f zip tmp/firefox/VioliProt/manifest.json schemes/firefox/VioliProt.xpi)
 (PYTHONPATH=./templates wheezy.template templates/deuter.json.wz tmp/vars/DimWitWell.json >tmp/vars/DimWitWellDeuter.json)
 (PYTHONPATH=./templates wheezy.template templates/deuter.json.wz tmp/vars/HotBrown.json >tmp/vars/HotBrownDeuter.json)
 (PYTHONPATH=./templates wheezy.template templates/deuter.json.wz tmp/vars/KanagawaMacaroni.json >tmp/vars/KanagawaMacaroniDeuter.json)
@@ -249,15 +297,15 @@ mkdir -p "schemes/kde"
 (wheezy.template templates/firefox.manifest.json.wz tmp/vars/PurpleMacaroniDeuter.json >tmp/firefox/PurpleMacaroniDeuter/manifest.json)
 (wheezy.template templates/firefox.manifest.json.wz tmp/vars/UglyMacaroniDeuter.json >tmp/firefox/UglyMacaroniDeuter/manifest.json)
 (wheezy.template templates/firefox.manifest.json.wz tmp/vars/VioliDeuter.json >tmp/firefox/VioliDeuter/manifest.json)
-(zip -j schemes/firefox/DimWitWellDeuter.xpi tmp/firefox/DimWitWellDeuter/manifest.json)
-(zip -j schemes/firefox/HotBrownDeuter.xpi tmp/firefox/HotBrownDeuter/manifest.json)
-(zip -j schemes/firefox/KanagawaMacaroniDeuter.xpi tmp/firefox/KanagawaMacaroniDeuter/manifest.json)
-(zip -j schemes/firefox/LavenoniDeuter.xpi tmp/firefox/LavenoniDeuter/manifest.json)
-(zip -j schemes/firefox/MacaroniTimeDeuter.xpi tmp/firefox/MacaroniTimeDeuter/manifest.json)
-(zip -j schemes/firefox/OneDarkMacaroniDeuter.xpi tmp/firefox/OneDarkMacaroniDeuter/manifest.json)
-(zip -j schemes/firefox/PurpleMacaroniDeuter.xpi tmp/firefox/PurpleMacaroniDeuter/manifest.json)
-(zip -j schemes/firefox/UglyMacaroniDeuter.xpi tmp/firefox/UglyMacaroniDeuter/manifest.json)
-(zip -j schemes/firefox/VioliDeuter.xpi tmp/firefox/VioliDeuter/manifest.json)
+(ouch c -f zip tmp/firefox/DimWitWellDeuter/manifest.json schemes/firefox/DimWitWellDeuter.xpi)
+(ouch c -f zip tmp/firefox/HotBrownDeuter/manifest.json schemes/firefox/HotBrownDeuter.xpi)
+(ouch c -f zip tmp/firefox/KanagawaMacaroniDeuter/manifest.json schemes/firefox/KanagawaMacaroniDeuter.xpi)
+(ouch c -f zip tmp/firefox/LavenoniDeuter/manifest.json schemes/firefox/LavenoniDeuter.xpi)
+(ouch c -f zip tmp/firefox/MacaroniTimeDeuter/manifest.json schemes/firefox/MacaroniTimeDeuter.xpi)
+(ouch c -f zip tmp/firefox/OneDarkMacaroniDeuter/manifest.json schemes/firefox/OneDarkMacaroniDeuter.xpi)
+(ouch c -f zip tmp/firefox/PurpleMacaroniDeuter/manifest.json schemes/firefox/PurpleMacaroniDeuter.xpi)
+(ouch c -f zip tmp/firefox/UglyMacaroniDeuter/manifest.json schemes/firefox/UglyMacaroniDeuter.xpi)
+(ouch c -f zip tmp/firefox/VioliDeuter/manifest.json schemes/firefox/VioliDeuter.xpi)
 (PYTHONPATH=./templates wheezy.template templates/rot30.json.wz tmp/vars/DimWitWell.json >tmp/vars/DimWitWellRot30.json)
 (PYTHONPATH=./templates wheezy.template templates/rot30.json.wz tmp/vars/HotBrown.json >tmp/vars/HotBrownRot30.json)
 (PYTHONPATH=./templates wheezy.template templates/rot30.json.wz tmp/vars/KanagawaMacaroni.json >tmp/vars/KanagawaMacaroniRot30.json)
@@ -312,12 +360,12 @@ mkdir -p "schemes/kde"
 (wheezy.template templates/firefox.manifest.json.wz tmp/vars/PurpleMacaroniRot30.json >tmp/firefox/PurpleMacaroniRot30/manifest.json)
 (wheezy.template templates/firefox.manifest.json.wz tmp/vars/UglyMacaroniRot30.json >tmp/firefox/UglyMacaroniRot30/manifest.json)
 (wheezy.template templates/firefox.manifest.json.wz tmp/vars/VioliRot30.json >tmp/firefox/VioliRot30/manifest.json)
-(zip -j schemes/firefox/DimWitWellRot30.xpi tmp/firefox/DimWitWellRot30/manifest.json)
-(zip -j schemes/firefox/HotBrownRot30.xpi tmp/firefox/HotBrownRot30/manifest.json)
-(zip -j schemes/firefox/KanagawaMacaroniRot30.xpi tmp/firefox/KanagawaMacaroniRot30/manifest.json)
-(zip -j schemes/firefox/LavenoniRot30.xpi tmp/firefox/LavenoniRot30/manifest.json)
-(zip -j schemes/firefox/MacaroniTimeRot30.xpi tmp/firefox/MacaroniTimeRot30/manifest.json)
-(zip -j schemes/firefox/OneDarkMacaroniRot30.xpi tmp/firefox/OneDarkMacaroniRot30/manifest.json)
-(zip -j schemes/firefox/PurpleMacaroniRot30.xpi tmp/firefox/PurpleMacaroniRot30/manifest.json)
-(zip -j schemes/firefox/UglyMacaroniRot30.xpi tmp/firefox/UglyMacaroniRot30/manifest.json)
-(zip -j schemes/firefox/VioliRot30.xpi tmp/firefox/VioliRot30/manifest.json)
+(ouch c -f zip tmp/firefox/DimWitWellRot30/manifest.json schemes/firefox/DimWitWellRot30.xpi)
+(ouch c -f zip tmp/firefox/HotBrownRot30/manifest.json schemes/firefox/HotBrownRot30.xpi)
+(ouch c -f zip tmp/firefox/KanagawaMacaroniRot30/manifest.json schemes/firefox/KanagawaMacaroniRot30.xpi)
+(ouch c -f zip tmp/firefox/LavenoniRot30/manifest.json schemes/firefox/LavenoniRot30.xpi)
+(ouch c -f zip tmp/firefox/MacaroniTimeRot30/manifest.json schemes/firefox/MacaroniTimeRot30.xpi)
+(ouch c -f zip tmp/firefox/OneDarkMacaroniRot30/manifest.json schemes/firefox/OneDarkMacaroniRot30.xpi)
+(ouch c -f zip tmp/firefox/PurpleMacaroniRot30/manifest.json schemes/firefox/PurpleMacaroniRot30.xpi)
+(ouch c -f zip tmp/firefox/UglyMacaroniRot30/manifest.json schemes/firefox/UglyMacaroniRot30.xpi)
+(ouch c -f zip tmp/firefox/VioliRot30/manifest.json schemes/firefox/VioliRot30.xpi)
