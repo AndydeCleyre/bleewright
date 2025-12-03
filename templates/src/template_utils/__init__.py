@@ -1,3 +1,7 @@
+"""Color conversion helpers"""
+
+__version__ = "0.0.0"
+
 from json import dumps
 from plumbum.cmd import pastel
 

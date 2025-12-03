@@ -8,13 +8,14 @@ markdown-it-py==4.0.0     # via rich
 mdurl==0.1.2              # via markdown-it-py
 nestedtext==3.7           # via nt2
 nt2==0.2.7                # via -r requirements.in
-plumbum==1.10.0           # via nt2
+plumbum==1.10.0           # via nt2, template-utils
 pygments==2.19.2          # via rich
 python-dateutil==2.9.0.post0  # via arrow, yamlpath
 rich==14.2.0              # via nt2
 ruamel-yaml==0.17.21      # via nt2, yamlpath
 six==1.17.0               # via inform, python-dateutil
+template-utils @ file:./templates  # via -r requirements.in
 typing-extensions==4.15.0  # via cattrs
 tzdata==2025.2            # via arrow
-wheezy-template==3.2.3    # via -r requirements.in
+wheezy-template==3.2.3    # via template-utils
 yamlpath==3.8.2           # via nt2

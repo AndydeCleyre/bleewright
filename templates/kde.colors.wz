@@ -1,6 +1,6 @@
 @require(meta, colors)
 @(
-from utils import hex_to_rgb
+from template_utils import hex_to_rgb
 bg = {
     name: hex_to_rgb(hex)
     for name, hex in colors['bg'].items()
