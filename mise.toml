@@ -1,20 +1,32 @@
 [tools]
 python = "latest"
+uv = "latest"
 "ubi:ouch-org/ouch" = "latest"
 "ubi:sharkdp/pastel" = "latest"
 
 [env._.python]
 venv = { path = ".venv", create = true }
 
-[tasks.ensure-uv]
-run = "command -v uv || python -m pip install uv"
-hide = true
+[vars]
+pip_compile = "uv pip compile --no-header --annotation-style=line"
+unchanged = "git diff --exit-code -U0"
+install_note = "printf '%s\n' 'To install the new versions:' '  mise run install'"
 
-[tasks.bump-reqs]
-depends = ["ensure-uv"]
-run = "uv pip compile --python python -o requirements.txt --no-header --annotation-style=line -U requirements.in"
-alias = "reqs"
+[tasks.remind-install-reqs]
+hide = true
+run = '''{{ vars.unchanged }} requirements.txt || {{vars.install_note}}'''
+
+[tasks.lock-upgrade]
+run = '''{{ vars.pip_compile }} -o requirements.txt -U requirements.in'''
+depends_post = "remind-install-reqs"
+
+[tasks.lock]
+run = '''{{ vars.pip_compile }} -o requirements.txt requirements.in'''
+depends_post = "remind-install-reqs"
 
 [tasks.install]
-depends = ["ensure-uv"]
-run = "uv pip install -p python -r requirements.txt"
+run = '''uv pip sync requirements.txt'''
+
+[[watch_files]]
+patterns = ["requirements.in"]
+run = '''mise run lock'''
