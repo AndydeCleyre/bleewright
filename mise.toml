@@ -52,3 +52,5 @@ patterns = ["requirements.in"]
 run = '''mise run lock'''
 
 # TODO: subsume install.sh
+# TODO: subsume inject.sh
+# TODO: subsume utils.sh
