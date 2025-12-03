@@ -27,6 +27,28 @@ depends_post = "remind-install-reqs"
 [tasks.install]
 run = '''uv pip sync requirements.txt'''
 
+[tasks.make]
+run = '''
+#!/bin/sh -e
+if command -v tup; then
+  tup || printf '%s\n' 'You might try running:' '  mise run clean' 'and then again:' '  mise run make'
+else
+  printf '%s\n' "./make.sh"
+fi
+'''
+
+[tasks.make-make]
+run = '''tup generate make.sh'''
+
+[tasks.clean]
+run = '''
+  for folder in tmp schemes; do
+    rm -r "$folder" || true
+  done
+'''
+
 [[watch_files]]
 patterns = ["requirements.in"]
 run = '''mise run lock'''
+
+# TODO: subsume install.sh
